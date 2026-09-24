@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "Incomplete inputs. Provide name of the folder in data as 1st argument." << std::endl;
 		return 0;
 	}
-	const std::string data_folder = std::string(argv[1]);
+	const std::string data_folder = "/" + std::string(argv[1]) + "/";
  
     // --- create mp3dpContext
     shared_ptr<Np3dpContext> np3dp = make_shared<Np3dpContext>(data_folder);
